@@ -11,8 +11,6 @@
             url = "github:nix-community/home-manager/release-25.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        affinity-nix.url = "github:mrshmllow/affinity-nix";
     };
 
     outputs = { self, home-manager, nixpkgs, nixpkgs-unstable, ... } @ inputs:
@@ -24,6 +22,11 @@
                 specialArgs = { inherit inputs outputs; };
                 modules = [./hosts/legion];
             };
+
+            yuki = nixpkgs.lib.nixosSystem {
+                specialArgs = { inherit inputs outputs; };
+                modules = [./hosts/yuki];
+            };
         };
 
         homeConfigurations = {
@@ -31,6 +34,15 @@
                 pkgs = nixpkgs.legacyPackages."x86_64-linux";
                 extraSpecialArgs = { inherit inputs outputs; };
                 modules = [./home/kaiccc/legion.nix];
+            };
+        };
+
+
+        homeConfigurations = {
+            "kaiccc@yuki" = home-manager.lib.homeManagerConfiguration {
+                pkgs = nixpkgs.legacyPackages."x86_64-linux";
+                extraSpecialArgs = { inherit inputs outputs; };
+                modules = [./home/kaiccc/yuki.nix];
             };
         };
     };
