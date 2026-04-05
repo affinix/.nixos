@@ -1,0 +1,20 @@
+* {
+    font-family: "JetBrains Nerd Font Mono";
+}
+
+#clock,
+#tray,
+#cpu,
+#memory,
+#battery,
+#network,
+#pulseaudio,
+#language {
+    margin: 6px 6px 6px 0px;
+    padding: 2px 8px;
+}
+
+#workspaces button.active {
+    color: white;
+    font-weight: bold;
+}

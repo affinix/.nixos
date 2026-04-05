@@ -1,0 +1,39 @@
+format = """$username$hostname$directory$fill[$all](grey)$time$line_break$character"""
+
+[character]
+success_symbol = "[@](bold green)"
+error_symbol = "[@](bold red)"
+
+[fill]
+symbol = '─'
+style = '#222222'
+
+[cmd_duration]
+min_time = 10000
+
+[time]
+disabled = false
+time_format = "%F %T"
+style = "#444444"
+format = '[$time]($style)'
+
+[python]
+symbol = "py "
+
+[package]
+symbol = "package "
+style = "#777777"
+
+[git_branch]
+symbol = "git "
+
+[aws]
+symbol = "aws "
+
+[terraform]
+symbol = "tf "
+style = "bold #777777"
+
+
+[directory]
+style = "bold #777777"
