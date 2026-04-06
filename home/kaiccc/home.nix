@@ -4,8 +4,10 @@
 
     programs.git = {
         enable = true;
-        userEmail = "imaffinix@gmail.com";
-        userName = "Kaibo Cao";
+        settings.user = {
+            email = "imaffinix@gmail.com";
+            name = "Kaibo Cao";
+        };
     };
 
     programs.home-manager.enable = true;

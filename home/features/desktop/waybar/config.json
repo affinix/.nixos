@@ -8,7 +8,7 @@
     "margin-bottom": 0,
     "margin-left": 8,
 
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
 
     "modules-center": ["clock"],
 
@@ -27,9 +27,9 @@
         "tooltip": false
     },
 
-    "tray": {
-        "spacing": 10,
-        "tooltip": false
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 150
     },
 
     "clock": {
@@ -53,16 +53,6 @@
         "states": {
             "critical": 80
         }
-    },
-
-    "battery": {
-        "format": "bat {capacity}%",
-        "interval": 5,
-        "states": {
-            "warning": 20,
-            "critical": 10
-        },
-        "tooltip": false
     },
 
     "network": {

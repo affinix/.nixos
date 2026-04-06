@@ -19,14 +19,15 @@
         };
 
         cursor = {
-            name = "Apple Cursor";
-            package = pkgs.apple-cursor;
+            package = pkgs.bibata-cursors;
+            name = "Bibata-Modern-Classic";
             size = 16;
         };
 
         targets.zed.enable = true;
         targets.waybar.enable = true;
         targets.kitty.enable = true;
+        targets.foot.enable = true;
         targets.firefox.profileNames = [ "kaiccc" ];
 
         targets.hyprland.hyprpaper.enable = false;

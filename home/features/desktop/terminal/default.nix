@@ -1,5 +1,8 @@
 { pkgs, inputs, ... }: {
-    programs.wezterm = {
+    programs.foot = {
         enable = true;
+        settings = {
+            main.shell = "fish";
+        };
     };
 }

@@ -14,7 +14,18 @@
     padding: 2px 8px;
 }
 
+#workspaces button {
+    padding: 0px 6px 0px 6px;
+    min-width: 1px;
+    color: #888888;
+}
+
 #workspaces button.active {
     color: white;
+    background-color: #222222;
     font-weight: bold;
+}
+
+#window {
+    padding-left: 16px;
 }
